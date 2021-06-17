@@ -1,0 +1,22 @@
+{
+    "lights": [
+        {
+            "node": "Light",
+            "type": "point",
+            "position": [0, 0, 0],
+            "power": [500, 500, 350]
+        },
+    ],
+    "materials": [
+        {
+            "name": "Material",
+            "diffuse": [0.2, 0.3, 0.8],
+            "roughness": 0.1
+        },
+        {
+            "name": "Material.001",
+            "diffuse": [0.2, 0.2, 0.2],
+            "rouguness": 0.3
+        }
+    ]
+}
