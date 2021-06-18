@@ -23,7 +23,7 @@ all of the g-buffer values are in the range \([0,1]\), I stored
 <span>`vNormal`</span> as the vertex normal in world space. If
 <span>`alpha > 1.0`</span> then I set `gAlpha.x = 1.0/alpha` and
 `gConvert.x = 1.0`; similarly for <span>`eta`</span> and
-<span>`k_s`</span>. There result is the following image showing all four
+<span>`k_s`</span>. The result is the following image showing all four
 g-buffers:
 
 ![Normals, Diffuse Reflectance, Alpha/Eta/K\_s, and Convert
@@ -32,7 +32,7 @@ G-Buffers](readme_refs/gbuffers.png)
 # Shadow Pass
 
 For each point light, I rendered the geometry using the light position
-as the camera position and generates a shadow-map buffer.
+as the camera position and generated a shadow-map buffer.
 
 ![Shadow Map](readme_refs/shadowmap.png)
 
@@ -75,7 +75,7 @@ The result of each blur is saved into a mipmap of the temporary frame
 buffer.  
 The merge pass merges the above 4 blur results and the original image
 with the weighted factors using the Spencer model:  
-\(0.8843g(x) + 0.1g(6.2,x) + 0.012g(24.9,x) + 0.0027g(81.0,x) + 0.001(263,x)\)  
+$$0.8843g(x) + 0.1g(6.2,x) + 0.012g(24.9,x) + 0.0027g(81.0,x) + 0.001(263,x)$$ 
 The result is saved into a frame buffer called mergebuffer.
 
 ![Blurred Sun-sky](readme_refs/blur.png)
