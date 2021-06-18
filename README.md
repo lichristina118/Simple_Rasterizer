@@ -75,7 +75,7 @@ The result of each blur is saved into a mipmap of the temporary frame
 buffer.  
 The merge pass merges the above 4 blur results and the original image
 with the weighted factors using the Spencer model:  
-$$0.8843g(x) + 0.1g(6.2,x) + 0.012g(24.9,x) + 0.0027g(81.0,x) + 0.001(263,x)$$ 
+$0.8843g(x) + 0.1g(6.2,x) + 0.012g(24.9,x) + 0.0027g(81.0,x) + 0.001(263,x)$ 
 The result is saved into a frame buffer called mergebuffer.
 
 ![Blurred Sun-sky](readme_refs/blur.png)
